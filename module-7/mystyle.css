@@ -17,14 +17,22 @@ Description: External CSS stylesheet for JavaFX circles.
 #redcircle {
     -fx-fill: red;
     fill: red;
-    -fx-stroke: black;
-    stroke: black;
+    -fx-stroke: transparent;
+    stroke: transparent;
 }
 
 /* ID selector for the green circle */
 #greencircle {
     -fx-fill: green;
     fill: green;
-    -fx-stroke: black;
-    stroke: black;
+    -fx-stroke: transparent;
+    stroke: transparent;
+}
+
+/* Style class for the first circle's container */
+.border {
+    -fx-border-color: black;
+    border-color: black;
+    -fx-border-width: 5;
+    border-width: 5;
 }

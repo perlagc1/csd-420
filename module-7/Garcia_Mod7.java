@@ -9,11 +9,12 @@ CSS stylesheet with style classes and IDs.
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 import javafx.geometry.Pos;
 import javafx.stage.Stage;
 
-public class Garcia_Mod7 extends Application{
+public class Garcia_Mod7 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
@@ -32,22 +33,22 @@ public class Garcia_Mod7 extends Application{
         circle3.setId("redcircle");
         circle4.setId("greencircle");
 
-        // Create a horizontal layout
-        HBox pane = new HBox(15);
-        pane.setAlignment(Pos.CENTER);
+        // Create a bordered container for the first circle
+        StackPane borderedPane = new StackPane(circle1);
+        borderedPane.getStyleClass().add("border");
+        borderedPane.setPrefWidth(90);
 
-        // Add circles to the layout
+        // Arrange the four circles horizontally
+        HBox pane = new HBox(8);
+        pane.setAlignment(Pos.CENTER);
         pane.getChildren().addAll(
-            circle1, circle2, circle3, circle4
+            borderedPane, circle2, circle3, circle4
         );
 
-        // Create the scene
-        Scene scene = new Scene(pane, 420, 150);
-
-        // Load the external CSS stylesheet
+        // Create the scene and load the external CSS
+        Scene scene = new Scene(pane, 400, 330);
         scene.getStylesheets().add(
-            getClass().getResource("mystyle.css")
-                .toExternalForm()
+            getClass().getResource("mystyle.css").toExternalForm()
         );
 
         // Display the application
@@ -57,6 +58,6 @@ public class Garcia_Mod7 extends Application{
     }
 
     public static void main(String[] args) {
-        Application.launch(Garcia_Mod7.class, args);
+        launch(args);
     }
 }
