@@ -1,0 +1,30 @@
+/*
+Name: Perla Garcia Cavazos
+Date: November 24, 2026
+Assignment: Module 7 - CSD 420
+Description: External CSS stylesheet for JavaFX circles.
+*/
+
+/* Style class for white fill and black stroke */
+.plaincircle {
+    -fx-fill: white;
+    fill: white;
+    -fx-stroke: black;
+    stroke: black;
+}
+
+/* ID selector for the red circle */
+#redcircle {
+    -fx-fill: red;
+    fill: red;
+    -fx-stroke: black;
+    stroke: black;
+}
+
+/* ID selector for the green circle */
+#greencircle {
+    -fx-fill: green;
+    fill: green;
+    -fx-stroke: black;
+    stroke: black;
+}
